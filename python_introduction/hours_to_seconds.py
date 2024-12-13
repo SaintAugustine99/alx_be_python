@@ -1,7 +1,7 @@
 # hours_to_seconds.py
 
 # Define the variable 
-hours  = 2 
+hours=2 
 
 # Calculate the number of seconds
 seconds = hours * 3600 
