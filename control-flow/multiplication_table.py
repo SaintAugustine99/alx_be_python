@@ -1,24 +1,6 @@
-# Prompt the user for input
-num1 = float(input("Enter the first number: "))
-num2 = float(input("Enter the second number: "))
-operation = input("Choose the operation (+, -, *, /): ").strip()
+# Prompt the user for a number
+number = int(input("Enter a number to see its multiplication table: "))
 
-# Perform the calculation using match case
-match operation:
-    case "+":
-        result = num1 + num2
-        print(f"The result is {result}.")
-    case "-":
-        result = num1 - num2
-        print(f"The result is {result}.")
-    case "*":
-        result = num1 * num2
-        print(f"The result is {result}.")
-    case "/":
-        if num2 != 0:
-            result = num1 / num2
-            print(f"The result is {result}.")
-        else:
-            print("Cannot divide by zero.")
-    case _:
-        print("Invalid operation.")
+# Generate and print the multiplication table
+for i in range(1, 10):
+    print(f"{number} * {i} = {number * i}")
