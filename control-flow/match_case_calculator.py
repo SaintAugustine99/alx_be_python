@@ -1,9 +1,9 @@
-# Prompt the user for input
+# Prompts the user for input
 num1 = float(input("Enter the first number: "))
 num2 = float(input("Enter the second number: "))
 operation = input("Choose the operation (+, -, *, /): ").strip()
 
-# Perform the calculation using match case
+# Performs the calculation using match case
 match operation:
     case "+":
         result = num1 + num2
