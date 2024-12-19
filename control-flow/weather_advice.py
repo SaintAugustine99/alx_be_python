@@ -1,5 +1,5 @@
 #Prompts the user for weather input
-weather = input ("What's the weather like today? (sunny/rainy/cold): ").strio().lower()
+weather = input ("What's the weather like today? (sunny/rainy/cold): ").strip().lower()
 
 #Provides clothing reccomendations based on input
 if weather == "sunny":
