@@ -1,0 +1,25 @@
+# Define the height of the pyramid
+rows = 5
+
+# Initialize the row counter
+i = 1
+
+# Outer loop to control the number of rows
+while i <= rows:
+    # Print leading spaces
+    spaces = rows - i
+    while spaces > 0:
+        print(" ", end="")
+        spaces -= 1
+    
+    # Print asterisks
+    stars = 2 * i - 1
+    while stars > 0:
+        print("*", end="")
+        stars -= 1
+    
+    # Move to the next line
+    print()
+    
+    # Increment the row counter
+    i += 1
