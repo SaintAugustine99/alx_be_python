@@ -1,5 +1,3 @@
-# testing function for first task
-
 from arithmetic_operations import perform_operation
 
 def main():
