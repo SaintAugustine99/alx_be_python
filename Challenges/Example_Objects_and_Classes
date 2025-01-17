@@ -1,0 +1,45 @@
+# Define a base class (Parent class)
+class Animal:
+    def __init__(self, name, species):
+        self.name = name  # Public attribute
+        self._species = species  # Protected attribute
+
+    def make_sound(self):
+        raise NotImplementedError("Subclass must implement abstract method")
+
+    def get_species(self):
+        return self._species
+
+# Define a derived class (Child class) that inherits from Animal
+class Dog(Animal):
+    def __init__(self, name, breed):
+        super().__init__(name, "Dog")
+        self.__breed = breed  # Private attribute
+
+    def make_sound(self):
+        return "Woof!"
+
+    def get_breed(self):
+        return self.__breed
+
+# Define another derived class (Child class) that inherits from Animal
+class Cat(Animal):
+    def __init__(self, name, color):
+        super().__init__(name, "Cat")
+        self.color = color  # Public attribute
+
+    def make_sound(self):
+        return "Meow!"
+
+# Create objects (instances) of the classes
+dog = Dog("Buddy", "Golden Retriever")
+cat = Cat("Whiskers", "Black")
+
+# Demonstrate polymorphism
+animals = [dog, cat]
+for animal in animals:
+    print(f"{animal.name} the {animal.get_species()} says {animal.make_sound()}")
+
+# Accessing attributes and methods
+print(f"{dog.name} is a {dog.get_breed()} breed")
+print(f"{cat.name} is a {cat.color} colored cat")
